@@ -1,0 +1,29 @@
+﻿@model MedicalEquipmentWeb.ViewModels.Login
+@*
+    
+*@
+@{
+    <h1>Login page</h1>
+    <p>@ViewBag.Error</p>
+    <form asp-controller="Authentication" asp-action="Login" method="post" enctype="multipart/form-data">
+        
+        <div>
+            <label>Email</label>
+            <input type="email" name="Email"></input>
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="Password"></input>
+            <span asp-validation-for="Password"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <a asp-action="SignInGoogle" asp-asp-controller="Authentication">Login with Google</a> 
+    <br/>
+    <a asp-action="ForgotPassword" asp-asp-controller="Authentication">Forgot password</a>
+    <br />
+    <a asp-action="SignUp" asp-controller="Authentication">SignUp Page</a>
+    
+    
+}

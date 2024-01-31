@@ -1,0 +1,43 @@
+﻿@model MedicalEquipmentWeb.ViewModels.SignUp;
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SignUp Page</h1>
+    <p>@ViewBag.Error</p>
+    <divn class="sign-up-form">
+        <form asp-controller="Authentication" asp-action="SignUp" method="post" enctype="multipart/form-data">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div>
+                <label asp-for="LastName">Last Name</label>
+                <input type="text" name="LastName"></input>
+                <span asp-validation-for="Email"></span>
+            </div>
+           <div>
+                <label asp-for="Email">Email</label>
+                <input type="email" name="Email"></input>
+                <span asp-validation-for="Email"></span>
+           </div>
+           
+           <div>
+                <label asp-for="Password">Password</label>
+                <input type="password" name="Password"></input>
+                <span asp-validation-for="Password"></span>
+           </div>
+            <div>
+                <label>Confirm Password</label>
+                <input type="password"></input>              
+            </div>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </divn>
+    <a asp-controller="Authentication" asp-action="Login">login page</a>
+    
+</div>

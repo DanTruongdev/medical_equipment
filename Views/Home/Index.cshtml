@@ -1,0 +1,19 @@
+﻿@model string
+@* 
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Index page</h1>
+    <h1>Welcome @Model</h1>
+    @if (!Model.Equals("Guest"))
+    {
+        <a asp-action="Logout" asp-controller="Authentication">logout</a>
+    }
+    else
+    {
+        <a asp-action="SignUp" asp-controller="Authentication">Sign up</a>
+        <br/>
+        <a asp-action="Login" asp-controller="Authentication">Login</a>
+    }
+
+}
