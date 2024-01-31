@@ -1,2 +1,2 @@
-# medical_equipment
+# Clone and run file .sln
  
